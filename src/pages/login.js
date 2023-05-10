@@ -33,6 +33,12 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Login() {
+  React.useEffect(() => {
+    if (localStorage.getItem("login") && localStorage.getItem("login") != "") {
+      navigate("/iot-temperature-sensor/home");
+    }
+  }, []);
+
   const navigate = useNavigate();
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -45,7 +51,7 @@ export default function Login() {
       toast.error("Invalid Login.");
     } else {
       localStorage.setItem("login", "connected");
-      navigate("/home");
+      navigate("/iot-temperature-sensor/home");
     }
   };
 

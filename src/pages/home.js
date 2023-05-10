@@ -8,7 +8,7 @@ function App() {
 
   React.useEffect(() => {
     if (!localStorage.getItem("login") || localStorage.getItem("login") == "") {
-      navigate("/");
+      navigate("/iot-temperature-sensor/");
     }
   }, []);
 
@@ -28,7 +28,7 @@ function App() {
           variant="contained"
           onClick={() => {
             localStorage.setItem("login", "");
-            navigate("/");
+            navigate("/iot-temperature-sensor/");
           }}
         >
           Logout
