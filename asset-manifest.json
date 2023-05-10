@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/iot-temperature-sensor/static/css/main.5b41da44.css",
-    "main.js": "/iot-temperature-sensor/static/js/main.1b67883b.js",
+    "main.js": "/iot-temperature-sensor/static/js/main.ec238c03.js",
     "static/js/787.b819ecdc.chunk.js": "/iot-temperature-sensor/static/js/787.b819ecdc.chunk.js",
     "static/media/243795420_322350476337322__n.jpg": "/iot-temperature-sensor/static/media/243795420_322350476337322_2204271855417197100_n.43f9128d4657f715e623.jpg",
     "index.html": "/iot-temperature-sensor/index.html",
     "main.5b41da44.css.map": "/iot-temperature-sensor/static/css/main.5b41da44.css.map",
-    "main.1b67883b.js.map": "/iot-temperature-sensor/static/js/main.1b67883b.js.map",
+    "main.ec238c03.js.map": "/iot-temperature-sensor/static/js/main.ec238c03.js.map",
     "787.b819ecdc.chunk.js.map": "/iot-temperature-sensor/static/js/787.b819ecdc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b41da44.css",
-    "static/js/main.1b67883b.js"
+    "static/js/main.ec238c03.js"
   ]
 }
