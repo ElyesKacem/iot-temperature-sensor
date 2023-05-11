@@ -95,7 +95,7 @@ export default function PersonalDashboard() {
 
     return (
         <>
-            <div className="canvas">
+            <div style={{ width: "80%", height: "400px" }}>
                 {chartData && <Line options={options} data={chartData} />}
             </div>
             <br />
