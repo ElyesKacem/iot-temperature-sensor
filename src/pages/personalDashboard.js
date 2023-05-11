@@ -53,18 +53,29 @@ export default function PersonalDashboard() {
   };
   const apiUrl =
     "https://api.thingspeak.com/channels/2140743/feeds.json?results=8000";
+  const [counter, setCounter] = React.useState(0);
 
   React.useEffect(() => {
-    axios
-      .get(apiUrl)
-      .then((response) => {
-        console.log(response.data);
-        setDataCloud(response.data.feeds);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
+    const timer = setTimeout(() => {
+      axios
+        .get(apiUrl)
+        .then((response) => {
+          console.log(response.data);
+          setDataCloud(response.data.feeds);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+      setCounter((prevCounter) => prevCounter + 1);
+      console.log(counter);
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [counter]);
+
+  React.useEffect(() => {}, []);
 
   React.useEffect(() => {
     console.log(dataCloud);
