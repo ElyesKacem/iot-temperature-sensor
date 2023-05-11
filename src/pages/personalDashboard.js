@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -12,6 +13,7 @@ import {
 import { Line } from "react-chartjs-2";
 // import faker from "faker";
 import axios from "axios";
+import { Button } from "@mui/material";
 
 ChartJS.register(
   CategoryScale,
@@ -75,16 +77,31 @@ export default function PersonalDashboard() {
     };
   }, [counter]);
 
-  React.useEffect(() => {}, []);
+  const navigate = useNavigate();
 
   React.useEffect(() => {
-    console.log(dataCloud);
-  }, [dataCloud]);
+    if (!localStorage.getItem("login") || localStorage.getItem("login") == "") {
+      navigate("/iot-temperature-sensor/");
+    }
+  }, []);
 
   return (
     <div>
       {" "}
-      <Line options={options} data={data} />{" "}
+      <Line options={options} data={data} />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Button
+        variant="contained"
+        onClick={() => {
+          localStorage.setItem("login", "");
+          navigate("/iot-temperature-sensor/");
+        }}
+      >
+        Logout
+      </Button>{" "}
     </div>
   );
 }
